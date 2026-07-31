@@ -20,11 +20,10 @@ const cardapio = [ //lista
     new Prato('Moqueca de Peixe', 58.00, 'Prato Principal'),
     new Prato('Coxinha Artesanal', 8.50, 'Petisco'),
     new Prato('Brigadeiro Gourmet', 6.00, 'Sobremesa'),
-    new Prato('Morango do Amor (Pistache)', 15.00, 'Sobremesa'),
-    new Prato('Suco de Maracujá', 12.00, 'Bebida')
+    new Prato('Morango do Amor (Pistache)', 15.00, 'Sobremesa')
 ]
 
-console.log('=== Pratos Criados ===') //mostra na tela
+console.log('=== Pratos ===') //mostra na tela
 cardapio.forEach(p => { //vai passar por cada item da lista
     console.log(`${p.nome} → ${p.formatarPreco()}`) //mostra os itens da lista na tela
 })
@@ -70,3 +69,15 @@ renderizarCardapio()
 
 cardapio[0].aplicarDesconto(20)
 renderizarCardapio()
+
+// EXERCÍCIOS 31/07
+
+class Bebida extends Prato{
+    constructor(nome, preco, )
+}
+
+const cardapioBebida = [
+    new Bebida('Suco de Maracujá', 12.00, 'Bebida'),
+    new Bebida('Água', 3.00, 'Bebida'),
+    new Bebida('Guaracamp', 7.00, 'Bebida')
+]
