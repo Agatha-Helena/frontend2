@@ -16,11 +16,9 @@ class Prato{
 
 //instanciando objetos
 const cardapio = [ //lista
-    new Prato('Feijoada completa', 42.90, 'Prato Principal'),
-    new Prato('Moqueca de Peixe', 58.00, 'Prato Principal'),
-    new Prato('Coxinha Artesanal', 8.50, 'Petisco'),
-    new Prato('Brigadeiro Gourmet', 6.00, 'Sobremesa'),
-    new Prato('Morango do Amor (Pistache)', 15.00, 'Sobremesa')
+    new Prato('Feijoada', 42.90, 'Prato Principal'),
+    new Prato('Brigadeiro', 58.00, 'Prato Principal'),
+    new Prato('Coxinha', 8.50, 'Petisco')
 ]
 
 console.log('=== Pratos ===') //mostra na tela
@@ -32,13 +30,13 @@ const containerCardapio = document.querySelector('#cardapio')
 
 function criarCardPrato(prato){
     const card = document.createElement('div')
-    card.className = 'card' //cria o nome da classe
+    card.className = 'card-prato col-12 col-md-6 col-lg-4 p-4 bg-white rounded-3 shadow-sm' //cria o nome da classe
 
     card.innerHTML = 
     `
-    <h3>${prato.nome}</h3>
-    <span class='categoria'>${prato.categoria}</span>
-    <div class='preco'>${prato.formatarPreco()}</div>
+    <h3 class="fs-4 fw-bold text-dark mb-2">${prato.nome}</h3>
+    <span class='categoria fs-6 d-block mb-3'>${prato.categoria}</span>
+    <div class='preco fs-5 fw-bold text-success'>${prato.formatarPreco()}</div>
     `
 
 
@@ -69,15 +67,3 @@ renderizarCardapio()
 
 cardapio[0].aplicarDesconto(20)
 renderizarCardapio()
-
-// EXERCÍCIOS 31/07
-
-class Bebida extends Prato{
-    constructor(nome, preco, )
-}
-
-const cardapioBebida = [
-    new Bebida('Suco de Maracujá', 12.00, 'Bebida'),
-    new Bebida('Água', 3.00, 'Bebida'),
-    new Bebida('Guaracamp', 7.00, 'Bebida')
-]
